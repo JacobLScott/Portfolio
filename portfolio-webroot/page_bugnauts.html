@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Jacob Scott | Bugnauts!</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Child page of Jacob Scott's 2025 portfolio site. Contains detailed information about his contributions to 'Bugnauts!' which is a video game created by a team of students at the USC Games program.">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Jacob Scott">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">
+
+        <Link rel="stylesheet" href="main.css">
+
+        <style>
+
+            #bugnaut-background {
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                height: 300%;
+                width: 100%;
+                background-image: url('img/bugnaut_background.avif');
+                background-size: cover;
+                background-position: center;
+                padding-top: 5px;
+			    padding-bottom: 30px;
+                text-align: center;
+                font-size: 4.0em;
+                text-shadow: 0px 0px 15px #FFF;
+                color: black;
+            }
+
+            #wrapper1 {
+                display: flex;
+                flex-direction: flex-start;
+                justify-content: center;
+            }
+            
+            #bugnaut-main {
+                background-color: white;
+                opacity: 0.9;
+                text-align: left;
+                padding: 50px;
+                height: 100%;
+                width: 66%;
+                margin-bottom: 0px;
+            }
+
+            #steam-wrapper {
+                display: flex;
+                flex-direction: flex-start;
+                justify-content: center;
+                position: relative;
+            }
+            #steam {
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-bottom: 6px;
+                padding-top: 1px;
+                color: white;
+                text-align: center;
+                background-color: #0c2c5e;
+                width: 100%;
+            }
+
+            #steam img {
+                width: 10%;
+            }
+
+            .overlay {
+                position: absolute;
+			    top: 0px;
+			    bottom: 0px;
+			    left: 0px;
+			    right: 0px;
+                width: 100%;
+
+			    /* background-color: black; */
+			    color: white;
+			    /* opacity: 0.7; */
+			    background-color: rgba(0, 0, 0, 0.7);
+
+			    text-align: center;
+			    padding-top: 100px;
+
+                
+                visibility: hidden;
+            }
+            
+            #steam:hover .overlay {
+                visibility: visible;
+            }
+
+            #image-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .image > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .image {
+                height: 300px;
+                width: 400px;
+                background-color: rgb(17, 115, 79);
+                color: white;
+                text-align: center;
+                margin-right: 100px;
+                margin-left: 100px;
+                margin-bottom: 70px;
+                object-fit: cover;
+            }
+
+            #contribution {
+                text-align: center;
+                color: white;
+                height: 100px;
+                background-color: black;
+                padding-top: 5px;
+                font-size: 1.2em;
+            }
+
+            #cont-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .cont {
+                height: 500px;
+                width: 700px;
+                background-color: rgb(17, 115, 79);
+                color: white;
+                text-align: center;
+                margin-right: 100px;
+                margin-left: 100px;
+                margin-bottom: 70px;
+                object-fit: cover;
+            }
+
+            a > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .cont > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="navbar">
+
+            <ul id="top-menu">
+
+                <li id="name"><a href="homepage.html"><strong>Jacob Scott</strong></a></li>
+                <!-- <li><a href="">About</a></li> -->
+                <li><a href="">Professional Projects</a>
+                <ul class="sub-menu">
+                    <li><a href="page_coming_soon.html">Unchained</a></li>
+                    <li><a href="page_bugnauts.html">Bugnauts!</a></li>
+                </ul>
+                </li>
+                <li><a href="">Personal Projects</a>
+                    <ul class="sub-menu">
+                        <li><a href="page_coming_soon.html">Level Design</a></li>
+                        <li><a href="page_coming_soon.html">Fire Emblem Mods</a></li>
+                    </ul>
+                    </li>
+                <li><a href="page_resume.html">Resume</a></li>
+                <li><a href="page_coming_soon.html">Contact</a></li>
+
+            </ul>
+
+        </div> <!--navbar-->
+
+        <div id="bluetop"></div>
+
+        <div id="bugnaut-background">
+
+            <h1>Bugnauts!</h1>
+
+        </div>
+
+        <div id="wrapper1">
+
+            <div id="bugnaut-main">
+
+                <h2>Bugnauts!</h2>
+    
+                <p></p>
+                <p>April 2023 - May 2025</p>
+                <p></p>
+                <p>Role: Designer</p>
+                <p>Bugnauts! is a single-player third-person action game that mixes accessible 3D projectile gameplay with environmental education. Players play as Chloe, a young aspiring entomologist who must use her bug net to defeat the giant Phantom Bugs that have overtaken the island she calls home. Bugnauts! is a finished project developed in Unreal Engine 5 as a capstone project at USC.</p>
+                <p></p>
+                <p><strong>Contributions</strong></p>
+                <p></p>
+                <ul>
+                    <li>Worked cooperatively on a team of 40+ with 2 other designers to create a game for AGP, USC's capstone project class.</li>
+                    <p></p>
+                    <li>Wrote numerous design documents for enemies, mechanics, and combat features</li>
+                    <p></p>
+                    <li>Prototyped and implemented mechanics and enemy features using Unreal Engine's Blueprint system</li>
+                    <p></p>
+                    <li>Created AI for enemy bugs using Unreal Engine's behavior tree systems</li>
+                    <p></p>
+                    <li>Created and tweaked the majority of enemy bugs' bullet attack patterns within the game</li>
+                    <p></p>
+                    <li>Greyboxed early forms of levels within the game</li>
+                </ul>
+    
+            </div>
+
+        </div> <!--wrapper1-->
+
+        <div id="steam-wrapper">
+
+            <div id="steam">
+
+                <h2>Play for yourself on Steam!</h2>
+
+                <img src="img/steam_logo.png" alt="Steam logo">
+
+                <div class="overlay">
+                    <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank"><span></span></a>
+                    <h3>Play Now!</h3>
+                </div>
+    
+            </div>
+
+        </div> <!--steam-wrapper-->
+
+        <div id="image-wrapper">
+
+            <div class="image">
+
+                <a href="img/environ.jpg" data-lightbox="images" data-title="">
+                    <img src="img/environ.jpg" alt="pretty environment">
+                  </a>
+
+            </div>
+
+            <div class="image">
+
+                <a href="img/beetle.jpg" data-lightbox="images" data-title="">
+                    <img src="img/beetle.jpg" alt="fight with beetle">
+                  </a>
+
+            </div>
+
+            <div class="image">
+
+                <a href="img/bridge.png" data-lightbox="images" data-title="">
+                    <img src="img/bridge.png" alt="bugnaut bridge">
+                  </a>
+
+            </div>
+
+            <div class="image">
+
+                <a href="img/dex.jpg" data-lightbox="images" data-title="">
+                    <img src="img/dex.jpg" alt="journal beetle">
+                  </a>
+
+            </div>
+
+        </div>
+
+        <div id="contribution">
+
+            <h2>Contributions</h2>
+
+        </div> <!--contribution-->
+
+        <div id="cont-wrapper">
+
+            <div class="cont">
+                <a href="img/behavior_tree.PNG" data-lightbox="images" data-title="">
+                    <img src="img/behavior_tree.PNG" alt="Behavior Tree">
+                  </a>
+                <h3>A section of an enemy bug's AI tree</h3>
+            </div>
+            <div class="cont">
+                <a href="img/pattern_design.PNG" data-lightbox="images" data-title="">
+                    <img src="img/pattern_design.PNG" alt="bullet pattern">
+                  </a>
+                <h3>A preview of one of the many enemy attack patterns</h3>
+            </div>
+
+        </div>
+        
+        
+
+        <div id="footer">
+
+            <p>Copyright © 2025 by Jacob Scott | All images, logos and names are used with permission</p>
+
+        </div>
+
+
+
+
+        <!--jQuery Library-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+  
+        <!--Lightbox Plugin-->
+        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+
+    </body>
+
+
+</html>
