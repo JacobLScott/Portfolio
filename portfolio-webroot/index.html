@@ -52,77 +52,119 @@
                 background-color: black;
                 padding-top: 5px;
                 font-size: 1.2em;
-            }
-
-            #professional-wrapper {
+            }            #professional-wrapper, #personal-wrapper {
                 display: flex;
-                align-items: flex-start;
+                align-items: stretch;
                 justify-content: center;
-                margin-top: 70px;
-                margin-bottom: 70px;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin: 2rem auto;
+                max-width: 1400px;
+                padding: 0 1rem;
             }
 
             a {
                 color: white;
                 text-decoration: none;
-            }
-
-            .project-image {
+            }            .project-image {
+                flex: 1;
+                min-width: 280px;
+                max-width: 350px;
                 height: 300px;
-                width: 300px;
-                background-color: rgb(17, 115, 79);
+                background-color: #1a1a1a;
                 color: white;
                 text-align: center;
-                margin-right: 100px;
-                margin-left: 100px;
-                object-fit: cover;
                 position: relative;
-                
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .project-image:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             }
 
             .project-image > img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: all 0.3s ease;
+                display: block;
             }
 
             .project-overlay {
                 position: absolute;
-			    top: 0px;
-			    bottom: 0px;
-			    left: 0px;
-			    right: 0px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+                color: white;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
 
-			    /* background-color: black; */
-			    color: white;
-			    /* opacity: 0.7; */
-			    background-color: rgba(0, 0, 0, 0.7);
+            .project-overlay h3 {
+                margin: 0 0 1rem 0;
+                font-size: 1.75rem;
+                transform: translateY(20px);
+                transition: transform 0.3s ease;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
 
-			    text-align: center;
-			    padding-top: 100px;
-
-			    visibility: hidden;
+            .project-overlay p {
+                opacity: 0;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                margin: 0;
+                font-size: 1.1rem;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             }
 
             .project-image:hover .project-overlay {
-			    visibility: visible;
-		    }
+                opacity: 1;
+            }
 
-            #personal {
+            .project-image:hover .project-overlay h3 {
+                transform: translateY(0);
+            }
+
+            .project-image:hover .project-overlay p {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .project-image:hover img {
+                transform: scale(1.05);
+                filter: brightness(0.4);
+            }
+
+            #personal, #professional {
                 text-align: center;
                 color: white;
-                height: 100px;
+                padding: 2rem 0;
                 background-color: black;
-                padding-top: 5px;
                 font-size: 1.2em;
             }
 
-            #personal-wrapper {
-                display: flex;
-                align-items: flex-start;
-                justify-content: center;
-                margin-top: 70px;
-                margin-bottom: 70px;
+            @media (max-width: 768px) {
+                #professional-wrapper, #personal-wrapper {
+                    gap: 1.5rem;
+                    padding: 0 1rem;
+                }
+
+                .project-image {
+                    min-width: 100%;
+                    margin: 0;
+                }
             }
 
         </style>
@@ -157,29 +199,22 @@
 
             <h2>Professional Projects</h2>
 
-        </div> <!--professional-->
-
-        <div id="professional-wrapper">
-              <div class="project-image">
+        </div> <!--professional-->        <div id="professional-wrapper">
+            <div class="project-image">
+                <img src="img/Unchained_Logo.png" alt="Unchained Logo" loading="lazy">
                 <a href="page_coming_soon.html" class="project-overlay">
                     <h3>Unchained: Tale of Enra</h3>
+                    <p>A tactical RPG developed with the USC Games program</p>
                 </a>
-                <img src="img/Unchained_Logo.png" alt="Unchained Logo">
-                <div>
-                    <h3>Unchained: Tale of Enra</h3>
-                </div>
-            </div> <!--project-image1-->
+            </div>
 
             <div class="project-image">
+                <img src="img/Bugnauts.png" alt="Bugnauts! image" loading="lazy">
                 <a href="page_bugnauts.html" class="project-overlay">
                     <h3>Bugnauts!</h3>
+                    <p>A team-based multiplayer game about friendly competition</p>
                 </a>
-                <img src="img/Bugnauts.png" alt="Bugnauts! image">
-                <div class="project-description">
-                    <h3>Bugnauts!</h3>
-                </div>
-            </div> <!--project-image2-->
-
+            </div>
         </div> <!--professional-wrapper-->
 
 
@@ -187,44 +222,37 @@
 
             <h2>Personal Projects</h2>
 
-        </div> <!--personal-->        <div id="personal-wrapper">            <div class="project-image">
+        </div> <!--personal-->        <div id="personal-wrapper">
+            <div class="project-image">
+                <img src="img/level.JPG" alt="UE5 Level image" loading="lazy">
                 <a href="page_coming_soon.html" class="project-overlay">
-                    <h3>Unreal Engine 5 | Level Design</h3>
+                    <h3>Unreal Engine 5 Level Design</h3>
+                    <p>Custom level design and environment art in UE5</p>
                 </a>
-                <img src="img/level.JPG" alt="UE5 Level image">
-                <div class="project-description">
-                    <h3>Unreal Engine 5 | Level Design</h3>
-                </div>
             </div>
 
             <div class="project-image">
+                <img src="img/fe_mod.JPG" alt="Fire Emblem Mod image" loading="lazy">
                 <a href="page_coming_soon.html" class="project-overlay">
                     <h3>Fire Emblem Modding</h3>
+                    <p>Custom campaign and character modifications</p>
                 </a>
-                <img src="img/fe_mod.JPG" alt="Fire Emblem Mod image">
-                <div class="project-description">
-                    <h3>Fire Emblem Modding</h3>
-                </div>
             </div>
 
             <div class="project-image">
+                <img src="img/chimken/chimken_title.png" alt="Chimken Crusade Title" loading="lazy">
                 <a href="page_chimken_crusade.html" class="project-overlay">
                     <h3>Chimken Crusade</h3>
+                    <p>A retro-style adventure game</p>
                 </a>
-                <img src="img/chimken/chimken_title.png" alt="Chimken Crusade Title">
-                <div class="project-description">
-                    <h3>Chimken Crusade</h3>
-                </div>
             </div>
 
             <div class="project-image">
+                <img src="img/rps/title.png" alt="Rock, Paper, Scissors, Shoot! Title" loading="lazy">
                 <a href="page_rps.html" class="project-overlay">
                     <h3>Rock, Paper, Scissors, Shoot!</h3>
+                    <p>A competitive multiplayer adaptation of the classic game</p>
                 </a>
-                <img src="img/rps/title.png" alt="Rock, Paper, Scissors, Shoot! Title">
-                <div class="project-description">
-                    <h3>Rock, Paper, Scissors, Shoot!</h3>
-                </div>
             </div>
 
         </div> <!--personal-wrapper-->
