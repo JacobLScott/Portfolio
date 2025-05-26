@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jacob Scott | Rock, Paper, Scissors, Shoot!</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Child page of Jacob Scott's portfolio site. Contains detailed information about Rock, Paper, Scissors, Shoot!, a top-down bullet hell game.">
+        <meta name="keywords" content="HTML, CSS, Game Development">
+        <meta name="author" content="Jacob Scott">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+        <Link rel="stylesheet" href="main.css">
+        <script src="components/navbar.js" defer></script>
+
+        <style>
+            #project-background {
+                margin: 0;
+                height: 300%;
+                width: 100%;
+                background-image: url('img/rps_placeholder.jpg');
+                background-size: cover;
+                background-position: center;
+                padding-top: 5px;
+                padding-bottom: 30px;
+                text-align: center;
+                font-size: 4.0em;
+                text-shadow: 0px 0px 15px #FFF;
+                color: black;
+            }
+
+            #wrapper1 {
+                display: flex;
+                flex-direction: flex-start;
+                justify-content: center;
+            }
+            
+            #project-main {
+                background-color: white;
+                opacity: 0.9;
+                text-align: left;
+                padding: 50px;
+                height: 100%;
+                width: 66%;                margin-bottom: 0px;
+            }
+
+            #image-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .image {
+                height: 300px;
+                width: 400px;
+                background-color: rgb(17, 115, 79);
+                color: white;
+                text-align: center;
+                margin-right: 100px;
+                margin-left: 100px;
+                margin-bottom: 70px;
+                object-fit: cover;
+            }
+
+            .image > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+
+        <div id="bluetop"></div>
+
+        <div id="project-background">
+            <h1>Rock, Paper, Scissors, Shoot!</h1>
+        </div>
+
+        <div id="wrapper1">
+            <div id="project-main">
+                <h2>Rock, Paper, Scissors, Shoot!</h2>
+                <p></p>
+                <p>December 2022</p>
+                <p></p>
+                <p>Role: Designer, Programmer</p>                <p>In this top-down bullet hell, players must master the power of rock, paper, and scissors to win back their school. Three gangs of 5th graders rule this school: The Rock Resistance, the Paper Platoon and the Scissor Squad. You and Billy, the only 2nd graders willing to take on this diabolical menace, must master each of the three weapon types to beat the leaders of each gang and save the school.</p>
+                <p></p>
+                <p>Rock, Paper, Scissors, Shoot! was developed in Unity in the span of 3 weeks as a final project for a class. I worked with a team of 4 people and was one of 2 members in charge of programming and design. The goal was to create a silly but lighthearted bullet hell where players had to manage cooldowns of different abilities. We succeeded in this goal, as each fight becomes drastically more difficult when not using every weapon type - much like a real game of RPS!</p>
+                <p></p>
+                <p><strong>Contributions</strong></p>
+                <p></p>
+                <ul>
+                    <li>Prototyped and implemented player movement, 3 different basic enemy types, 1 boss enemy, and 2 obstacles</li>
+                    <p></p>
+                    <li>Created and implemented weapon and health bar UI</li>
+                    <p></p>                    <li>Implemented weapon sound effects and music</li>
+                </ul>
+
+                <div id="image-wrapper">
+                    <div class="image">
+                        <a href="img/rps/gameplay.jpg" data-lightbox="rps" data-title="Gameplay Screenshot">
+                            <img src="img/rps/gameplay.jpg" alt="RPS Gameplay">
+                        </a>
+                    </div>
+                    <div class="image">
+                        <a href="img/rps/combat.jpg" data-lightbox="rps" data-title="Combat System">
+                            <img src="img/rps/combat.jpg" alt="Combat System">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    </body>
+</html>

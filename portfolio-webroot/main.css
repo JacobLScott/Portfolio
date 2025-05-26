@@ -167,16 +167,26 @@ body{
     text-align: center;
 }
 
+#professional-wrapper, #personal-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .project-image {
     height: 300px;
     width: 300px;
     background-color: rgb(17, 115, 79);
     color: white;
     text-align: center;
-    margin-right: 100px;
-    margin-left: 100px;
     position: relative;
     cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
 }
 
 .project-image > img {
@@ -216,6 +226,31 @@ body{
 /* Remove the old span styling since we're restructuring the overlay */
 a span {
     display: none;
+}
+
+@media (max-width: 1200px) {
+    #professional-wrapper, #personal-wrapper {
+        gap: 20px;
+    }
+    
+    .project-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    #professional-wrapper, #personal-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-image {
+        width: 90%;
+        max-width: 300px;
+        height: 300px;
+        margin: 10px 0;
+    }
 }
 
 
