@@ -5,76 +5,156 @@ body{
     font-family: "Gowun Dodum", normal;
 }
 
-#bluetop {
-    height: 70px;
-    background-color: #0c2c5e;
-}
-
-#navbar{
-    margin: 0px;
-    padding: 10px;
-    padding-bottom: 20px;
-    background-color: black;
-    opacity: 0.5;
+/* Updated Navbar Styles */
+#navbar {
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 100%;
-    height: 40px;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 #navbar ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #navbar li {
-    background-color: black;
+    background: none;
     position: relative;
 }
 
 #navbar li:hover {
-    background-color: #FC0;
+    background: none;
 }
 
 #navbar a {
     display: block;
-    width: 180px;
+    width: auto;
     text-align: center;
     text-decoration: none;
     color: #FFF;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+    color: #FC0;
 }
 
 #top-menu {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#top-menu ul {
+.sub-menu {
     position: absolute;
-    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 
-#navbar li:hover > ul {
-    display: block;
+#navbar li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 #name {
-    width: 200px;
-    padding-bottom: 0px;
+    width: auto;
+    padding: 0;
     font-size: 1.5em;
-    margin-left: 0px;
-    margin-right: 50px;
+    margin: 0;
 }
 
-a span {
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
+#name a {
+    font-weight: bold;
+    padding-left: 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #top-menu > li:not(#name) {
+        display: none;
+        width: 100%;
+    }
+
+    #top-menu.active > li:not(#name) {
+        display: block;
+    }
+
+    #navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    #navbar a {
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    .sub-menu {
+        position: static;
+        background: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    #navbar li:hover > .sub-menu {
+        display: block;
+    }
+
+    #top-menu > li:not(#name) {
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sub-menu li {
+        padding-left: 1rem;
+    }
+}
+
+/* Reset the bluetop height since navbar is now fixed */
+#bluetop {
+    height: 90px;
 }
 
 #footer{
@@ -85,6 +165,57 @@ a span {
     padding-top: 1px;
     padding-bottom: 15px;
     text-align: center;
+}
+
+.project-image {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(17, 115, 79);
+    color: white;
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.project-image:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+/* Remove the old span styling since we're restructuring the overlay */
+a span {
+    display: none;
 }
 
 

@@ -14,10 +14,9 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
-        <Link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">        <Link rel="stylesheet" href="main.css">
         <script src="components/navbar.js" defer></script>
+
         <style>
 
             iframe {
@@ -29,34 +28,8 @@
         </style>
 
     </head>
-
     <body>
         <nav-bar></nav-bar>
-        
-        <div id="navbar">
-
-            <ul id="top-menu">
-
-                <li id="name"><a href="index.html"><strong>Jacob Scott</strong></a></li>
-                <!-- <li><a href="">About</a></li> -->
-                <li><a href="">Professional Projects</a>
-                <ul class="sub-menu">
-                    <li><a href="page_coming_soon.html">Unchained</a></li>
-                    <li><a href="page_bugnauts.html">Bugnauts!</a></li>
-                </ul>
-                </li>
-                <li><a href="">Personal Projects</a>
-                    <ul class="sub-menu">
-                        <li><a href="page_coming_soon.html">Level Design</a></li>
-                        <li><a href="page_coming_soon.html">Fire Emblem Mods</a></li>
-                    </ul>
-                    </li>
-                <li><a href="page_resume.html">Resume</a></li>
-                <li><a href="page_coming_soon.html">Contact</a></li>
-
-            </ul>
-
-        </div>
 
         <div id="bluetop"></div>
 
@@ -72,6 +45,11 @@
 
         </div>
 
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.getElementById('top-menu').classList.toggle('active');
+            });
+        </script>
     </body>
 
 

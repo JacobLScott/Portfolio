@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-
     <head>
-
         <title>Jacob Scott</title>
-
         <meta charset="UTF-8">
         <meta name="description" content="Homepage of Jacob Scott's 2025 portfolio site. This is meant to be shown to recruiters when interviewing for various game development studios. Page gives a general overview of the candidate and shows the games the candidate has worked on.">
         <meta name="keywords" content="HTML, CSS">
         <meta name="author" content="Jacob Scott">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
-
         <Link rel="stylesheet" href="main.css">
         <script src="components/navbar.js" defer></script>
+
         <style>
 
             #trailer-wrapper {
@@ -135,7 +130,6 @@
     </head>
 
     <body>
-
         <nav-bar></nav-bar>
         <div id="bluetop"></div>
 
@@ -166,35 +160,24 @@
         </div> <!--professional-->
 
         <div id="professional-wrapper">
-            
-            <div class="project-image">
-
-                <div class="project-overlay">
-                    <a href="page_coming_soon.html"><span></span></a>
+              <div class="project-image">
+                <a href="page_coming_soon.html" class="project-overlay">
                     <h3>Unchained: Tale of Enra</h3>
-                </div>
-
+                </a>
                 <img src="img/Unchained_Logo.png" alt="Unchained Logo">
-
                 <div>
                     <h3>Unchained: Tale of Enra</h3>
                 </div>
-
             </div> <!--project-image1-->
 
             <div class="project-image">
-
-                <div class="project-overlay">
-                    <a href="page_bugnauts.html"><span></span></a>
+                <a href="page_bugnauts.html" class="project-overlay">
                     <h3>Bugnauts!</h3>
-                </div>
-
+                </a>
                 <img src="img/Bugnauts.png" alt="Bugnauts! image">
-
                 <div class="project-description">
                     <h3>Bugnauts!</h3>
                 </div>
-
             </div> <!--project-image2-->
 
         </div> <!--professional-wrapper-->
@@ -206,36 +189,24 @@
 
         </div> <!--personal-->
 
-        <div id="personal-wrapper">
-
-            <div class="project-image">
-
-                <div class="project-overlay">
-                    <a href="page_coming_soon.html"><span></span></a>
+        <div id="personal-wrapper">            <div class="project-image">
+                <a href="page_coming_soon.html" class="project-overlay">
                     <h3>Unreal Engine 5 | Level Design</h3>
-                </div>
-
+                </a>
                 <img src="img/level.JPG" alt="UE5 Level image">
-
                 <div class="project-description">
                     <h3>Unreal Engine 5 | Level Design</h3>
                 </div>
-
             </div>
 
             <div class="project-image">
-
-                <div class="project-overlay">
-                    <a href="page_coming_soon.html"><span></span></a>
+                <a href="page_coming_soon.html" class="project-overlay">
                     <h3>Fire Emblem Modding</h3>
-                </div>
-
-                <img src="img/fe_mod.JPG" alt="UE5 Level image">
-
+                </a>
+                <img src="img/fe_mod.JPG" alt="Fire Emblem Mod image">
                 <div class="project-description">
                     <h3>Fire Emblem Modding</h3>
                 </div>
-
             </div>
 
         </div> <!--personal-wrapper-->
@@ -248,6 +219,11 @@
 
         </div>
 
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.getElementById('top-menu').classList.toggle('active');
+            });
+        </script>
     </body>
 
 

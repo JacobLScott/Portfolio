@@ -15,10 +15,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">
-
-        <Link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">        <Link rel="stylesheet" href="main.css">
         <script src="components/navbar.js" defer></script>
+
         <style>
 
             #bugnaut-background {
@@ -174,7 +173,7 @@
     </head>
     <body>
         <nav-bar></nav-bar>
-        
+
         <div id="bluetop"></div>
 
         <div id="bugnaut-background">
@@ -304,7 +303,11 @@
   
         <!--Lightbox Plugin-->
         <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.getElementById('top-menu').classList.toggle('active');
+            });
+        </script>
     </body>
 
 

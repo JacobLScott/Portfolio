@@ -14,10 +14,9 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
-        <Link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">        <Link rel="stylesheet" href="main.css">
         <script src="components/navbar.js" defer></script>
+
         <style>
 
             #coming {
@@ -34,7 +33,6 @@
         </style>
 
     </head>
-
     <body>
         <nav-bar></nav-bar>
 
@@ -52,6 +50,11 @@
 
         </div>
 
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.getElementById('top-menu').classList.toggle('active');
+            });
+        </script>
     </body>
 
 
