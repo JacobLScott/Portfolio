@@ -20,7 +20,7 @@
                 margin: 0;
                 height: 300%;
                 width: 100%;
-                background-image: url('img/chimken_placeholder.jpg');
+                background-image: url('img/chimken/lvl1.PNG');
                 background-size: cover;
                 background-position: center;
                 padding-top: 5px;
@@ -29,12 +29,11 @@
                 font-size: 4.0em;
                 text-shadow: 0px 0px 15px #FFF;
                 color: black;
-            }
-
-            #wrapper1 {
+            }            #wrapper1 {
                 display: flex;
-                flex-direction: flex-start;
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
             }
             
             #project-main {
@@ -42,8 +41,8 @@
                 opacity: 0.9;
                 text-align: left;
                 padding: 50px;
-                height: 100%;
-                width: 66%;                margin-bottom: 0px;
+                width: 66%;
+                margin-bottom: 0;
             }
 
             #image-wrapper {
@@ -52,24 +51,32 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 70px;
-            }
-
-            .image {
-                height: 300px;
-                width: 400px;
+            }            .image {
+                width: 500px;
                 background-color: rgb(17, 115, 79);
                 color: white;
                 text-align: center;
-                margin-right: 100px;
-                margin-left: 100px;
-                margin-bottom: 70px;
-                object-fit: cover;
+                margin: 20px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
 
             .image > img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                display: block;
+                background-color: #1a1a1a;
+            }#steam-wrapper {
+                width: 100%;
+                margin: 0;
+            }
+            
+            #steam {
+                padding: 50px;
+                color: white;
+                text-align: center;
+                background-color: #0c2c5e;
+                width: 100%;
             }
         </style>
     </head>
@@ -88,9 +95,9 @@
                 <p></p>
                 <p>April 2023</p>
                 <p></p>
-                <p>Role: Designer, Programmer, Narrative</p>                <p>Chimken Crusade is an accessible bullet hell game where players are armed with naught but their wits and Chimken the chicken's stubby legs. With the support of an old wise goat, players must escort a golden egg back to Chimken's home without falling prey to the jealous monsters.</p>
+                <p>Role: Designer, Programmer, Narrative</p>                <p>Chimken Crusade is an accessible bullet hell game where players are armed with naught but their wits and Chimken the chicken's stubby legs. With the support of an wise old goat, players must escort a golden egg back to Chimken's home without falling prey to the jealous monsters.</p>
                 <p></p>
-                <p>This game was developed in Unity for a class over the course of a semester by a team of 2. It was originally planned to be a 2D Tactical RPG featuring an autoscrolling camera to incentivize players to make their moves quickly, until we realized we needed to adjust the scope. The project was then successfully pivoted into the engaging bullet hell game it is today.</p>
+                <p>This game was developed in Unity for a class over the course of a semester by myself and a partner. It was originally planned to be a 2D Tactical RPG featuring an autoscrolling camera to incentivize players to make their moves quickly, until we realized we needed to adjust the scope. The project was then successfully pivoted into the game you see here.</p>
                 <p></p>
                 <p><strong>Contributions</strong></p>
                 <p></p>
@@ -105,18 +112,20 @@
                     <p></p>                    <li>Wrote all dialogue and tutorials</li>
                 </ul>
 
-                <div id="image-wrapper">
-                    <div class="image">
-                        <a href="img/chimken/gameplay.jpg" data-lightbox="chimken" data-title="Gameplay Screenshot">
-                            <img src="img/chimken/gameplay.jpg" alt="Chimken Crusade Gameplay">
-                        </a>
-                    </div>
-                    <div class="image">
-                        <a href="img/chimken/dialogue.jpg" data-lightbox="chimken" data-title="Dialogue System">
-                            <img src="img/chimken/dialogue.jpg" alt="Dialogue System">
-                        </a>
-                    </div>
-                </div>
+                
+              </div>
+        </div>
+
+        <div id="steam-wrapper">
+            <div id="steam">
+                <p></p>
+            </div>
+        </div>        <div id="image-wrapper">
+            <div class="image">
+                <img src="img/chimken/lvl3.gif" alt="Chimken Crusade Gameplay">
+            </div>
+            <div class="image">
+                <img src="img/chimken/lvl4.PNG" alt="Dialogue System">
             </div>
         </div>
 
