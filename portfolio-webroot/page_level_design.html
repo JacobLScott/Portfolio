@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jacob Scott | UE5 Level Design</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Child page of Jacob Scott's portfolio site. Contains detailed information about custom level design work in Unreal Engine 5.">
+        <meta name="keywords" content="HTML, CSS, Game Development, Level Design, Unreal Engine 5">
+        <meta name="author" content="Jacob Scott">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+        <Link rel="stylesheet" href="main.css">
+        <script src="components/navbar.js" defer></script>
+
+        <style>
+            #project-background {
+                margin: 0;
+                height: 300%;
+                width: 100%;
+                background-image: url('img/level.JPG');
+                background-size: cover;
+                background-position: center;
+                padding-top: 5px;
+                padding-bottom: 30px;
+                text-align: center;
+                font-size: 4.0em;
+                text-shadow: 0px 0px 15px #FFF;
+                color: black;
+            }
+
+            #wrapper1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            
+            #project-main {
+                background-color: white;
+                opacity: 0.9;
+                text-align: left;
+                padding: 50px;
+                width: 66%;
+                margin-bottom: 0;
+            }
+
+            #image-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .image {
+                width: 500px;
+                background-color: rgb(17, 115, 79);
+                color: white;
+                text-align: center;
+                margin: 20px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .image > img {
+                width: 100%;
+                display: block;
+                background-color: #1a1a1a;
+            }
+
+            #steam-wrapper {
+                width: 100%;
+                margin: 0;
+            }
+            
+            #steam {
+                padding: 50px;
+                color: white;
+                text-align: center;
+                background-color: #0c2c5e;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+
+        <div id="bluetop"></div>
+
+        <div id="project-background">
+            <h1>Level Design</h1>
+        </div>
+
+        <div id="wrapper1">
+            <div id="project-main">
+                <h2>Unreal Engine 5 Level Design</h2>
+                <p></p>
+                <p>January 2025 - Present</p>
+                <p></p>
+                <p>Role: Level Designer</p>
+                <p>This page highlights the process I used to quickly prototype 3D environments and levels in Unreal Engine 5</p>
+                <p></p>
+                <p><strong>Highlights</strong></p>
+                <p></p>
+                <ul>
+                    <li>Prototyped and implemented multiple environments using UE5's latest features</li>
+                    <p></p>                  
+                    <li>Utilized modular design principles for efficient asset creation and placement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="image-wrapper">
+            <div class="image">
+                <img src="img/level.JPG" alt="UE5 Level Overview">
+            </div>
+            <div class="image">
+                <img src="img/environ.jpg" alt="Environment Detail">
+            </div>
+        </div>
+
+        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    </body>
+</html>

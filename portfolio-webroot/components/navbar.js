@@ -13,11 +13,10 @@ class NavBar extends HTMLElement {
                             <li><a href="page_bugnauts.html">Bugnauts!</a></li>
                         </ul>
                     </li>                    <li><a href="">Personal Projects</a>
-                        <ul class="sub-menu">
-                            <li><a href="page_chimken_crusade.html">Chimken Crusade</a></li>
+                        <ul class="sub-menu">                            <li><a href="page_chimken_crusade.html">Chimken Crusade</a></li>
                             <li><a href="page_rps.html">Rock, Paper, Scissors, Shoot!</a></li>
-                            <li><a href="page_coming_soon.html">Level Design</a></li>
-                            <li><a href="page_coming_soon.html">Fire Emblem Mods</a></li>
+                            <li><a href="page_level_design.html">Level Design</a></li>
+                            <li><a href="page_coming_soon.html">Reverse Engineering Fire Emblem</a></li>
                         </ul>
                     </li>
                     <li><a href="page_resume.html">Resume</a></li>
